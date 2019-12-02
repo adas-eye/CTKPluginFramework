@@ -26,7 +26,7 @@
 #ifndef HAVE_QT5
 #include <QDesignerCustomWidgetCollectionInterface>
 #else
-#include <QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
+#include <QDesignerCustomWidgetCollectionInterface> //<QtUiPlugin/QDesignerCustomWidgetCollectionInterface>
 #endif
 
 // CTK includes

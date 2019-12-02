@@ -25,7 +25,7 @@
 #include "ctkCmdLineModuleFrontend.h"
 
 #include <QtGlobal>
-#if QT_VERSION < QT_VERSION_CHECK(5,6,0)
+#if QT_VERSION < QT_VERSION_CHECK(5,0,0)
 class QWebView;
 #else
 class QWebEngineView;

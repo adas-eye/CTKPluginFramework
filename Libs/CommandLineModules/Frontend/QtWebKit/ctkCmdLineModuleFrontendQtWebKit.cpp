@@ -25,7 +25,7 @@
 #include "ctkCmdLineModuleReference.h"
 
 #include <QtGlobal>
-#if QT_VERSION < QT_VERSION_CHECK(5,6,0)
+#if QT_VERSION < QT_VERSION_CHECK(5,0,0)
 #include <QWebView>
 #include <QWebFrame>
 #include <QWebElement>
@@ -50,7 +50,7 @@ QObject* ctkCmdLineModuleFrontendQtWebKit::guiHandle() const
 {
   if (WebView) return WebView;
 
-#if QT_VERSION < QT_VERSION_CHECK(5,6,0)
+#if QT_VERSION < QT_VERSION_CHECK(5,0,0)
   QBuffer input;
   input.setData(moduleReference().rawXmlDescription());
 
@@ -81,7 +81,7 @@ QObject* ctkCmdLineModuleFrontendQtWebKit::guiHandle() const
 QVariant ctkCmdLineModuleFrontendQtWebKit::value(const QString &parameter, int role) const
 {
   Q_UNUSED(role);
-#if QT_VERSION < QT_VERSION_CHECK(5,6,0)
+#if QT_VERSION < QT_VERSION_CHECK(5,0,0)
   QWebElement webElement = this->WebView->page()->currentFrame()->findFirstElement("input[name=" + parameter + "]");
   if (webElement.isNull()) return QVariant();
   // Work around bug https://bugs.webkit.org/show_bug.cgi?id=32865 for input elements
@@ -101,7 +101,7 @@ void ctkCmdLineModuleFrontendQtWebKit::setValue(const QString &parameter, const 
 {
   if (!this->WebView || role != DisplayRole) return;
 
-#if QT_VERSION < QT_VERSION_CHECK(5,6,0)
+#if QT_VERSION < QT_VERSION_CHECK(5,0,0)
   QWebElement webElement = this->WebView->page()->currentFrame()->findFirstElement("input[name=" + parameter + "]");
   if (webElement.isNull()) return;
 
