@@ -61,7 +61,7 @@ void ctkPluginFrameworkPrivate::initSystemPlugin()
   this->pluginContext.reset(new ctkPluginContext(this));
 }
 
-//----------------------------------------------------------------------------
+//------激活----------------------------------------------------------------------
 void ctkPluginFrameworkPrivate::activate(ctkPluginContext* context)
 {
   ctkProperties locationProperties;
@@ -71,18 +71,21 @@ void ctkPluginFrameworkPrivate::activate(ctkPluginContext* context)
     locationProperties["type"] =  ctkPluginFrameworkLauncher::PROP_USER_AREA;
     registrations.push_back(context->registerService<ctkLocation>(location, locationProperties));
   }
+  
   location = ctkLocationManager::getInstanceLocation();
   if (location != NULL)
   {
     locationProperties["type"] = ctkPluginFrameworkLauncher::PROP_INSTANCE_AREA;
     registrations.push_back(context->registerService<ctkLocation>(location, locationProperties));
   }
+
   location = ctkLocationManager::getConfigurationLocation();
   if (location != NULL)
   {
     locationProperties["type"] = ctkPluginFrameworkLauncher::PROP_CONFIG_AREA;
     registrations.push_back(context->registerService<ctkLocation>(location, locationProperties));
   }
+
   location = ctkLocationManager::getInstallLocation();
   if (location != NULL)
   {

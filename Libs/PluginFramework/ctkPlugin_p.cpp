@@ -605,7 +605,7 @@ int ctkPluginPrivate::getStartLevel()
   }
 }
 
-//----------------------------------------------------------------------------
+//------等待操作----------------------------------------------------------------------
 void ctkPluginPrivate::waitOnOperation(LockObject* lock, const QString& src, bool longWait)
 {
   if (operation.fetchAndAddOrdered(0) != IDLE)
@@ -657,7 +657,7 @@ void ctkPluginPrivate::waitOnOperation(LockObject* lock, const QString& src, boo
   }
 }
 
-//----------------------------------------------------------------------------
+//----查找资源项------------------------------------------------------------------------
 QStringList ctkPluginPrivate::findResourceEntries(const QString& path,
                                                   const QString& pattern, bool recurse) const
 {

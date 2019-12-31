@@ -341,7 +341,7 @@ const QString ctkLocationManager::CONFIG_FILE = "config.ini";
 const QString ctkLocationManager::CTK_PROPERTIES = "ctk.properties";
 
 
-//----------------------------------------------------------------------------
+//------初始化位置----------------------------------------------------------------------
 void ctkLocationManager::initializeLocations()
 {
   if (isInitialized) return;

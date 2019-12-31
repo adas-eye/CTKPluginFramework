@@ -41,7 +41,7 @@ ctkPlugin::ctkPlugin()
 //----------------------------------------------------------------------------
 void ctkPlugin::init(ctkPluginPrivate* dd)
 {
-  if (d_ptr) throw ctkIllegalStateException("ctkPlugin already initialized");
+  if (d_ptr) throw ctkIllegalStateException("ctkPlugin already initialized");//非法状态异常
   d_ptr = dd;
 }
 

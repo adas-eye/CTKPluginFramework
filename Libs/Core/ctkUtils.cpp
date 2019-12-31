@@ -268,7 +268,7 @@ int ctk::orderOfMagnitude(double value)
 double ctk::closestPowerOfTen(double _value)
 {
   const double sign = _value >= 0. ? 1 : -1;
-  const double value = qAbs(_value);
+  const double value = qAbs(_value);//qAbs 绝对值
   if (value == 0.
       || value == std::numeric_limits<double>::infinity()
       || value != value // is NaN
@@ -302,7 +302,7 @@ double ctk::closestPowerOfTen(double _value)
   return magnitude * sign;
 }
 
-//-----------------------------------------------------------------------------
+//------递归remove目录-----------------------------------------------------------------------
 bool ctk::removeDirRecursively(const QString & dirName)
 {
   bool result = false;
@@ -333,7 +333,7 @@ bool ctk::removeDirRecursively(const QString & dirName)
   return result;
 }
 
-//-----------------------------------------------------------------------------
+//----递归复制目录-------------------------------------------------------------------------
 bool ctk::copyDirRecursively(const QString &srcPath, const QString &dstPath)
 {
   // See http://stackoverflow.com/questions/2536524/copy-directory-using-qt

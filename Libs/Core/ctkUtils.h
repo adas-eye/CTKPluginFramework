@@ -45,7 +45,8 @@
     } \
   } while (false)
 
-namespace ctk {
+// 实用工具
+namespace ctk { 
 ///
 /// \ingroup Core
 /// Convert a QStringList to Vector of char*

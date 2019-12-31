@@ -40,6 +40,7 @@ class ctkServices;
 
 /**
  * \ingroup PluginFramework
+ * 插件框架上下文
  */
 class ctkPluginFrameworkContext
 {
@@ -47,52 +48,52 @@ class ctkPluginFrameworkContext
 public:
 
   /**
-   * All plugins in this framework.
+   * All plugins in this framework. 包含了所有插件
    */
   ctkPlugins* plugins;
 
   /**
-   * All listeners in this framework.
+   * All listeners in this framework. 此框架中的所有侦听器
    */
   ctkPluginFrameworkListeners listeners;
 
   /**
-   * All registered services in this framework.
+   * All registered services in this framework. 此框架中的所有注册服务
    */
   ctkServices* services;
 
   /**
-   * System plugin
+   * System plugin 系统插件
    */
   QSharedPointer<ctkPluginFramework> systemPlugin;
 
   /**
-   * ctkPlugin storage
+   * ctkPlugin storage  ctkPlugin存储
    */
   ctkPluginStorage* storage;
 
   /**
-   * Private Plugin data storage
+   * Private Plugin data storage 私有插件数据存储
    */
   QDir dataStorage;
 
   /**
-   * First framework init
+   * First framework init  首次框架初始化状态
    */
   bool firstInit;
 
   /**
-   * Framework id.
+   * Framework id.  当前框架的id
    */
   int id;
 
   /**
-   * global lock.
+   * global lock. 全局锁
    */
   static QMutex globalFwLock;
 
   /**
-   * Id to use for next instance of plugin framework.
+   * Id to use for next instance of plugin framework. 用于插件框架的下一个实例的Id。
    */
   static int globalId;
 
@@ -149,7 +150,7 @@ public:
    *
    * @param plugin ctkPlugin to check, must be in INSTALLED state
    *
-   * @throws ctkPluginException
+   * @throws ctkPluginException 解析插件
    */
   void resolvePlugin(ctkPluginPrivate* plugin);
 

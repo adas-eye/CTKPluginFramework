@@ -79,6 +79,7 @@ class ctkPluginPrivate;
  * Framework that created them.
  *
  * @remarks This class is thread safe.
+ * CTK插件
  */
 class CTK_PLUGINFW_EXPORT ctkPlugin {
 

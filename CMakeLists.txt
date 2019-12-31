@@ -658,7 +658,7 @@ set(CTK_ENABLED_APPS ${_enabled_apps} CACHE INTERNAL "" FORCE)
 set(plugin_list
   # Optional plug-ins implementings interfaces in PluginFramework/service/
   org.commontk.configadmin
-  org.commontk.eventadmin
+  org.commontk.eventadmin   #插件间通信的核心
   org.commontk.log
   org.commontk.metatype
   )

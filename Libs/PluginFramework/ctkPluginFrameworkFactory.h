@@ -37,6 +37,7 @@ class ctkPluginFrameworkContext;
 /**
  * \ingroup PluginFramework
  * A factory for creating ctkPluginFramework instances.
+ * 用于创建ctkPluginFramework实例的工厂
  */
 class CTK_PLUGINFW_EXPORT ctkPluginFrameworkFactory
 {
@@ -59,6 +60,7 @@ public:
    *        The ctkPluginFramework instance created with #getFramework()
    *        must use some reasonable default configuration if certain
    *        properties are not provided.
+   * @param ctkProperties是 QHash<QString, QVariant>类型
    */
   ctkPluginFrameworkFactory(const ctkProperties& initProps = ctkProperties());
 

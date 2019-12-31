@@ -34,13 +34,13 @@ class ctkPluginFrameworkPrivate;
  * \ingroup PluginFramework
  *
  * A %ctkPluginFramework instance. A %ctkPluginFramework is also known as a System %Plugin.
- *
+ * ctkPluginFramework实例
  * <p>
  * %ctkPluginFramework instances are created using a ctkPluginFrameworkFactory. The methods
  * of this class can be used to manage and control the created plugin framework
  * instance.
  *
- * @remarks This class is thread safe.
+ * @remarks This class is thread safe. 这个类线程安全
  */
 class CTK_PLUGINFW_EXPORT ctkPluginFramework : public ctkPlugin
 {

@@ -657,7 +657,7 @@ void ctkPluginStorageSQL::setAutostartSetting(int key, int autostart)
   executeQuery(&query, statement, bindValues);
 }
 
-//----------------------------------------------------------------------------
+//--------查找资源路径--------------------------------------------------------------------
 QStringList ctkPluginStorageSQL::findResourcesPath(int archiveKey, const QString& path) const
 {
   QSqlDatabase database = getConnection();
